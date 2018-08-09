@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zsrun.ipctest.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/other_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="访问其他程序的Activity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/call_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="调用系统拨打电话Activity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/other_activity" />
+
+            <Button
+                android:id="@+id/contentprovider_dictionary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通过ContentProvider查询数据库数据"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/call_phone" />
+
+            <Button
+                android:id="@+id/contentprovider_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通过ContentProvider获取系统联系人信息"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contentprovider_dictionary" />
+
+            <Button
+                android:id="@+id/broadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="广播 跨进程发送数据"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contentprovider_contacts" />
+
+            <Button
+                android:id="@+id/aidl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通过AIDL获取数据"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/broadcast" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
